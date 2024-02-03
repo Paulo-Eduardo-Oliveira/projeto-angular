@@ -1,0 +1,12 @@
+<h1> Componente Diretivas e ngIf e else</h1>
+
+<div *ngIf="exibir">
+  <h4 [ngStyle]="{'font-size': size+'px', color: color}"> Testando (ngStyle)</h4>
+  <h4 [ngClass]="classes"> Testando (ngClass)</h4>
+
+  <h4 *ngIf="tipo === 'mostrar'; else naoMostrar"> Mostrar ngIf</h4>
+
+  <ng-template #naoMostrar>
+    <h4>Mostrar else</h4>
+  </ng-template>
+</div>

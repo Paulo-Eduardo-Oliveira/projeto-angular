@@ -1,0 +1,19 @@
+<h1>Componente first</h1>
+<h4>(ngIf) Nome: {{name}}</h4>
+<h4>Idade: {{idade}}</h4>
+<h4>Profissao: {{profissao}}</h4>
+
+<h4> Hobbie que mais gosto(array):</h4>
+<h4>
+  <div *ngFor="let hobbie of hobbies">
+    {{hobbie}}
+  </div>
+</h4>
+
+<h4>Carros que já tive(objeto):</h4>
+<h4>
+  <div *ngFor="let carro of carros ">
+    {{carro.name}} - {{carro.ano}}
+  </div>
+</h4>
+<a href="#">Veja mais sobre o {{name}}</a>

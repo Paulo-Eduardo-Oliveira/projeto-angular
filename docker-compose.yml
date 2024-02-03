@@ -1,0 +1,18 @@
+version: '3'
+services:
+  projeto-angular:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: projeto-angular
+    tty: true
+    ports:
+      - "4200:4200"
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+    command: >
+      bash -c "npm config set registry https://registry.npmjs.org/ &&
+      npm install &&
+      npm install -g @angular/cli@13.3.0 &&
+      ng serve --poll 1000 --host 0.0.0.0 --port 4200"
