@@ -6,6 +6,7 @@
 
   <h4 *ngIf="tipo === 'mostrar'; else naoMostrar"> Mostrar - ngIf</h4>
 
+<!--  Tratar exibição do valor em caso de else-->
   <ng-template #naoMostrar>
     <h4>Mostrar - else</h4>
   </ng-template>
