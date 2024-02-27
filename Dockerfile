@@ -16,4 +16,6 @@ COPY . /usr/src/app
 #RUN npm install -g @angular/cli@13.3.0
 
 EXPOSE 4200
+
+EXPOSE 3000
 # END

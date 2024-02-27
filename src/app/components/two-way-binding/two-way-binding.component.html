@@ -1,0 +1,15 @@
+<h1>Componente two-way-binding</h1>
+<div>
+  <h2>Two way data binding</h2>
+  <input
+    type="text"
+    [(ngModel)]="name"
+    name="name"
+    placeholder="Digite seu nome"
+  />
+  <input type="submit" (click)="mostrarNome(name)" value="Enviar" />
+
+  <h2 *ngIf="exibirNome">
+    <p>O nome é: {{ name }}</p>
+  </h2>
+</div>
